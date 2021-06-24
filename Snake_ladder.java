@@ -3,6 +3,7 @@ public class UC1_Initial_position {
 	public static void main(String[] args) {
 		System.out.println("Welcome ");
 		int P = 0;
+                int count = 0;
                 System.out.print("Enter player name: ");
 		Scanner sc = new Scanner(System.in);
 		String Name = sc.next();
@@ -11,6 +12,8 @@ public class UC1_Initial_position {
                 while (Winning > P) {
                 int Dice = (int) (Math.floor(Math.random() * 10) % 6 + 1);
 		System.out.println("Dice roll: " + Dice);
+                count++;
+                System.out.println(count);
                 int remaining = Winning - P;
 		System.out.println(remaining);
 		int number = (int) (Math.floor(Math.random() * 10) % 3);
