@@ -11,7 +11,10 @@ public class UC1_Initial_position {
                 while (Winning > P) {
                 int Dice = (int) (Math.floor(Math.random() * 10) % 6 + 1);
 		System.out.println("Dice roll: " + Dice);
+                int remaining = Winning - P;
+		System.out.println(remaining);
 		int number = (int) (Math.floor(Math.random() * 10) % 3);
+                if (remaining >= Dice) {
 		switch (number) {
 			case 0:
 				System.out.println("No play");
@@ -27,6 +30,7 @@ public class UC1_Initial_position {
 				if (P < 0)
 					P = 0;
 		}
+                }
                 }
 		System.out.println("Player position is: " + P);
 }
