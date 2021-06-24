@@ -1,4 +1,5 @@
 public class UC1_Initial_position {
+        public static final int Winning = 100;
 	public static void main(String[] args) {
 		System.out.println("Welcome ");
 		int P = 0;
@@ -7,6 +8,7 @@ public class UC1_Initial_position {
 		String Name = sc.next();
 		System.out.println("Player name is: " + Name);
 		System.out.println(P + "Initial position of player is " );
+                while (Winning > P) {
                 int Dice = (int) (Math.floor(Math.random() * 10) % 6 + 1);
 		System.out.println("Dice roll: " + Dice);
 		int number = (int) (Math.floor(Math.random() * 10) % 3);
@@ -25,6 +27,7 @@ public class UC1_Initial_position {
 				if (P < 0)
 					P = 0;
 		}
+                }
 		System.out.println("Player position is: " + P);
 }
 }
